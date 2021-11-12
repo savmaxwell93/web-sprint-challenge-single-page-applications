@@ -75,13 +75,13 @@ function App () {
     const newOrder = {
       name: pizzaOrder.name,
       size: pizzaOrder.size,
-      pepperoni: 'pepperoni',
-      sausage: 'sausage',
-      ham: 'ham',
-      chicken: 'chicken',
-      pineapple: 'pineapple',
-      greenPepper: 'greenPepper',
-      onion: 'onion',
+      pepperoni: pizzaOrder.pepperoni,
+      sausage: pizzaOrder.sausage,
+      ham: pizzaOrder.ham,
+      chicken: pizzaOrder.chicken,
+      pineapple: pizzaOrder.pineapple,
+      greenPepper: pizzaOrder.greenPepper,
+      onion: pizzaOrder.onion,
       special: pizzaOrder.special,
     }
 
