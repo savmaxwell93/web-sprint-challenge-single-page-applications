@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../index.css';
 
-const Confirmation = () => {
-    //console.log(props)
+const Confirmation = (props) => {
+    console.log(props)
 
     return (
         <div>
