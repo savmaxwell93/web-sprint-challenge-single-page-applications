@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
 import '../index.css';
 import axios from 'axios';
+import Confirmation from './Confirmation';
 
-function Pizza (props) {
+const Pizza = (props) => {
     //State
 
     return (
@@ -13,7 +15,11 @@ function Pizza (props) {
             </div>
 
 
-
+            <nav>
+                <Link to='/Confirmation'>
+                    <button>Complete Order</button>
+                </Link>
+            </nav>
 
         </div>
     )
