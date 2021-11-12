@@ -1,11 +1,22 @@
-import React from "react";
+import React from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
+import './index.css'
+
+import Pizza from './components/Pizza'
+import Confirmation from './components/Confirmation';
+
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className='App'>
+      <header>
+        <h1>Lambda Eats</h1>
+        <p>Get the best pizza in town delivered to your door!</p>
+        <nav>
+
+        </nav>
+      </header>
+    </div>
   );
 };
 export default App;
