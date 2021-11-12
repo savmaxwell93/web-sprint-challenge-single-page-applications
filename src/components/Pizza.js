@@ -5,7 +5,7 @@ import axios from 'axios';
 import Confirmation from './Confirmation';
 
 
-const Pizza = (props) => {
+function Pizza (props) {
 
     const {
         values, 

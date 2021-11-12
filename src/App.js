@@ -38,7 +38,7 @@ const initialErrorText = {
 const initialOrders = []
 const initialDisabled = true
 
-const App = () => {
+function App () {
 
   //States
   const [orders, setOrders] = useState(initialOrders)
@@ -51,7 +51,7 @@ const App = () => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
         console.log(res.data);
-        setOrders({ ...orders, newOrder:res.data});
+        setOrders([res.data, ...orders]);
       })
       .catch(err => console.error(err))
       .finally(() => {
@@ -75,13 +75,13 @@ const App = () => {
     const newOrder = {
       name: pizzaOrder.name,
       size: pizzaOrder.size,
-      pepperoni: ['pepperoni'],
-      sausage: ['sausage'],
-      ham: ['ham'],
-      chicken: ['chicken'],
-      pineapple: ['pineapple'],
-      greenPepper: ['greenPepper'],
-      onion: ['onion'],
+      pepperoni: 'pepperoni',
+      sausage: 'sausage',
+      ham: 'ham',
+      chicken: 'chicken',
+      pineapple: 'pineapple',
+      greenPepper: 'greenPepper',
+      onion: 'onion',
       special: pizzaOrder.special,
     }
 
