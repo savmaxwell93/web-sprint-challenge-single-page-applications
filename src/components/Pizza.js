@@ -47,6 +47,7 @@ const Pizza = (props) => {
                             onChange={onChange}
                             value={values.size}
                         >
+                            <option value=''>--Choose a Size--</option>
                             <option value='Small'>Small</option>
                             <option value='Medium'>Medium</option>
                             <option value='Large'>Large</option>
@@ -83,7 +84,7 @@ const Pizza = (props) => {
                         />Chicken
                         <input
                             id='toppings'
-                            name='Pineapple'
+                            name='pineapple'
                             type='checkbox'
                             checked={values.pineapple}
                             onChange={onChange}

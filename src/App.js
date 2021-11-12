@@ -51,7 +51,7 @@ const App = () => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
         console.log(res)
-        //setOrders([res.data, ...orders])
+        setOrders([res, ...orders])
       })
       .catch(err => console.error(err))
       .finally(() => {
@@ -86,7 +86,7 @@ const App = () => {
       special: pizzaOrder.special,
     }
 
-    newPizzaOrder(newOrder)
+    newPizzaOrder(newOrder);
 
   }
 
