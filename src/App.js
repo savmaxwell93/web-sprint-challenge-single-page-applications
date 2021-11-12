@@ -50,7 +50,8 @@ const App = () => {
   const newPizzaOrder = newOrder => {
     axios.post('https://reqres.in/api/orders', newOrder)
       .then(res => {
-        console.log(res)
+        console.log(res.data);
+        setOrders({ ...orders, newOrder:res.data});
       })
       .catch(err => console.error(err))
       .finally(() => {
@@ -71,7 +72,6 @@ const App = () => {
   }
 
   const onSubmit = (e) => {
-    e.preventDefault();
     const newOrder = {
       name: pizzaOrder.name,
       size: pizzaOrder.size,
@@ -113,9 +113,6 @@ const App = () => {
             disabled={disabled}
             errors={errorText}
           />
-        </Route>
-        <Route path='/Confirmation'>
-          <Confirmation />
         </Route>
       </Switch>
     </div>

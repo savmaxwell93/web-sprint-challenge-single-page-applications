@@ -112,13 +112,8 @@ const Pizza = (props) => {
                             onChange={onChange}
                         />
                     </label>
-                </form>
-
-            <nav>
-                <Link to='/Confirmation'>
                     <button disabled={disabled} id='order-button'>Complete Order</button>
-                </Link>
-            </nav>
+                </form>
             <div className='errors'>
                     <div>{errors.name}</div>
             </div>
